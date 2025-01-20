@@ -1,28 +1,8 @@
 {
-  "name": "cosmos-kit",
-  "version": "2.23.8",
+  "name": "@cosmos-kit/galaxy-station-mobile",
+  "version": "2.13.6",
   "description": "cosmos-kit wallet connector",
-  "author": "developers@hyperweb.io",
-  "contributors": [
-    {
-      "name": "Jun Liu"
-    },
-    {
-      "name": "Tom Wang"
-    },
-    {
-      "name": "Dan Lynch"
-    },
-    {
-      "name": "Noah Saso"
-    },
-    {
-      "name": "Eliot Baker"
-    },
-    {
-      "name": "Delivan Jeonghyeok Yoo"
-    }
-  ],
+  "author": "Hexxagon",
   "homepage": "https://github.com/hyperweb-io/cosmos-kit#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "cjs/index.js",
@@ -30,7 +10,7 @@
   "types": "cjs/index.d.ts",
   "directories": {
     "lib": "src",
-    "test": "test"
+    "test": "__tests__"
   },
   "files": [
     "cjs",
@@ -60,33 +40,23 @@
     "url": "https://github.com/hyperweb-io/cosmos-kit"
   },
   "keywords": [
-    "cosmos-kit",
     "cosmos",
-    "keplr",
-    "leap",
-    "cosmostation",
+    "cosmos-kit",
+    "hexxagon",
+    "galaxy-station",
     "wallet"
   ],
   "bugs": {
     "url": "https://github.com/hyperweb-io/cosmos-kit/issues"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
+  },
   "dependencies": {
-    "@cosmos-kit/cdcwallet": "^2.15.6",
-    "@cosmos-kit/coin98": "^2.13.6",
-    "@cosmos-kit/compass": "^2.13.6",
-    "@cosmos-kit/cosmostation": "^2.14.5",
-    "@cosmos-kit/ctrl": "^2.13.5",
-    "@cosmos-kit/exodus": "^2.12.5",
-    "@cosmos-kit/fin": "^2.13.6",
-    "@cosmos-kit/galaxy-station": "^2.13.6",
-    "@cosmos-kit/keplr": "^2.14.6",
-    "@cosmos-kit/leap": "^2.14.6",
-    "@cosmos-kit/ledger": "^2.13.6",
-    "@cosmos-kit/okxwallet-extension": "^2.13.4",
-    "@cosmos-kit/omni": "^2.12.5",
-    "@cosmos-kit/owallet": "^2.14.5",
-    "@cosmos-kit/shell": "^2.13.6",
-    "@cosmos-kit/tailwind": "^1.7.5",
-    "@cosmos-kit/trust": "^2.13.5"
+    "@chain-registry/keplr": "^1.69.13",
+    "@cosmos-kit/core": "^2.15.4",
+    "@cosmos-kit/walletconnect": "^2.12.4"
   }
 }

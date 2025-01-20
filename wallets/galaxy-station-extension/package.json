@@ -1,0 +1,67 @@
+{
+  "name": "@cosmos-kit/galaxy-station-extension",
+  "version": "2.13.6",
+  "description": "@cosmos-kit/galaxy-station-extension is the Galaxy Station integration for CosmosKit",
+  "author": "Hexxagon",
+  "homepage": "https://github.com/cosmology-tech/cosmos-kit#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "cjs/index.d.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "cjs",
+    "esm",
+    "!CHANGELOG.md",
+    "!LICENSE"
+  ],
+  "scripts": {
+    "build:cjs": "yarn tsc -p tsconfig.json --outDir cjs --module commonjs || true",
+    "build:esm": "yarn tsc -p tsconfig.json --outDir esm --module es2022 || true",
+    "clean:cjs": "rimraf cjs",
+    "clean:esm": "rimraf esm",
+    "clean": "npm run clean:cjs && npm run clean:esm",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "prepare": "npm run build",
+    "lint": "eslint --ext .tsx,.ts .",
+    "format": "eslint --ext .tsx,.ts --fix .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmology-tech/cosmos-kit"
+  },
+  "keywords": [
+    "cosmos-kit",
+    "cosmos",
+    "hexxagon",
+    "galaxy-station",
+    "wallet"
+  ],
+  "bugs": {
+    "url": "https://github.com/cosmology-tech/cosmos-kit/issues"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
+  },
+  "dependencies": {
+    "@chain-registry/types": "0.46.11",
+    "@cosmos-kit/core": "^2.15.0",
+    "@hexxagon/feather.js": "^1.0.9-beta.8",
+    "@hexxagon/station-connector": "^1.0.17"
+  },
+  "peerDependencies": {
+    "@cosmjs/amino": ">=0.32.3",
+    "@cosmjs/proto-signing": ">=0.32.3"
+  }
+}
